@@ -19,7 +19,7 @@ public class ColorFrame extends JFrame{
         add(green);
         blue = new JButton("blue");
         add(blue);
-        //anonimen vytreshen klas
+        //anonimen vytreshen klas - annonymous inner class
         ActionListener act = new ActionListener(){
             public void actionPerformed(ActionEvent event){
             if(event.getSource() == red){
@@ -33,7 +33,7 @@ public class ColorFrame extends JFrame{
             }
             }
         };
-    //krai na anonimen vytreshen klas
+    //krai na anonimen vytreshen klas - end of annonymous inner class
     red.addActionListener(act);
     green.addActionListener(act);
     blue.addActionListener(act);
