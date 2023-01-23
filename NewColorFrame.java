@@ -6,7 +6,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class NewColorFrame extends JFrame{
-    JButton red, green, blue;
+    JButton red, green, blue, yellow;
     
 public NewColorFrame(){
     super("NewColorFrame");
@@ -20,6 +20,8 @@ public NewColorFrame(){
     add(green);
     blue = new JButton("Blue");
     add(blue);
+    yellow = new JButton("Yellow");
+    add(yellow);
     //zapochva lambda izrazyt - Lambda expression start
     ActionListener act = (event) -> {
         if(event.getSource() == red ){
@@ -31,11 +33,15 @@ public NewColorFrame(){
         if(event.getSource() == blue){
             getContentPane().setBackground(Color.BLUE);           
         }
+        if(event.getSource() == yellow){
+            getContentPane().setBackground(Color.YELLOW);           
+        }
     };
     //zavyrshva lambda izrazyt - Lambda expression end
     red.addActionListener(act);
     green.addActionListener(act);
     blue.addActionListener(act);
+    yellow.addActionListener(act);
     setVisible(true);
 }
 
