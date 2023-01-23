@@ -20,7 +20,7 @@ public NewColorFrame(){
     add(green);
     blue = new JButton("Blue");
     add(blue);
-    //zapochva lambda izrazyt
+    //zapochva lambda izrazyt - Lambda expression start
     ActionListener act = (event) -> {
         if(event.getSource() == red ){
             getContentPane().setBackground(Color.RED);
@@ -32,7 +32,7 @@ public NewColorFrame(){
             getContentPane().setBackground(Color.BLUE);           
         }
     };
-    //zavyrshva lambda izrazyt
+    //zavyrshva lambda izrazyt - Lambda expression end
     red.addActionListener(act);
     green.addActionListener(act);
     blue.addActionListener(act);
